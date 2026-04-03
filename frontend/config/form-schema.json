@@ -1,0 +1,93 @@
+{
+  "_comment": "FormBuilder schema — register this in zorbit-pfs-form_builder for config-driven task create/edit forms",
+  "formId": "sample-task-form",
+  "title": "Task",
+  "version": "1.0",
+  "sections": [
+    {
+      "title": "Task Details",
+      "columns": 2,
+      "fields": [
+        {
+          "key": "title",
+          "label": "Task Title",
+          "type": "text",
+          "required": true,
+          "maxLength": 200,
+          "placeholder": "Enter task title",
+          "column": 1
+        },
+        {
+          "key": "priority",
+          "label": "Priority",
+          "type": "select",
+          "required": true,
+          "options": [
+            { "value": "low", "label": "Low" },
+            { "value": "medium", "label": "Medium" },
+            { "value": "high", "label": "High" },
+            { "value": "critical", "label": "Critical" }
+          ],
+          "defaultValue": "medium",
+          "column": 2
+        },
+        {
+          "key": "description",
+          "label": "Description",
+          "type": "textarea",
+          "required": false,
+          "placeholder": "Describe the task in detail",
+          "column": "full"
+        },
+        {
+          "key": "dueDate",
+          "label": "Due Date",
+          "type": "date",
+          "required": false,
+          "column": 1
+        },
+        {
+          "key": "tags",
+          "label": "Tags",
+          "type": "tags",
+          "required": false,
+          "placeholder": "Add tags (comma-separated)",
+          "column": 2
+        }
+      ]
+    },
+    {
+      "title": "Assignment (PII-Protected)",
+      "columns": 2,
+      "description": "Assignee name and email are stored as PII tokens via the PII Vault. Raw values never touch the task database.",
+      "fields": [
+        {
+          "key": "assigneeName",
+          "label": "Assignee Name",
+          "type": "text",
+          "required": false,
+          "pii": true,
+          "placeholder": "Full name of the assignee",
+          "column": 1
+        },
+        {
+          "key": "assigneeEmail",
+          "label": "Assignee Email",
+          "type": "email",
+          "required": false,
+          "pii": true,
+          "placeholder": "Email address",
+          "column": 2
+        },
+        {
+          "key": "assigneeHashId",
+          "label": "Assignee User ID",
+          "type": "text",
+          "required": false,
+          "placeholder": "U-XXXX (from identity service)",
+          "column": 1
+        }
+      ]
+    }
+  ]
+}

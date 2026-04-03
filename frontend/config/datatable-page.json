@@ -1,0 +1,27 @@
+{
+  "_comment": "DataTable page definition — register this in zorbit-pfs-datatable via POST /api/v1/G/datatable/pages",
+  "shortname": "sample-tasks",
+  "title": "Task Management",
+  "description": "Sample task management module — demonstrates all Zorbit platform patterns",
+  "dataSource": {
+    "type": "mongodb",
+    "connectionKey": "zorbit_sample_tasks",
+    "collection": "tasks",
+    "database": "zorbit_sample_tasks"
+  },
+  "defaultSort": { "field": "createdAt", "order": "desc" },
+  "defaultLimit": 20,
+  "searchFields": ["title", "description"],
+  "timeField": "createdAt",
+  "lockedFilters": [],
+  "columns": [
+    { "field": "hashId", "label": "Task ID", "sortable": true, "width": 120 },
+    { "field": "title", "label": "Title", "sortable": true },
+    { "field": "status", "label": "Status", "sortable": true, "width": 130, "enum": true },
+    { "field": "priority", "label": "Priority", "sortable": true, "width": 110, "enum": true },
+    { "field": "assigneeNameToken", "label": "Assignee (PII)", "pii": true, "width": 160 },
+    { "field": "tags", "label": "Tags", "width": 180 },
+    { "field": "dueDate", "label": "Due Date", "sortable": true, "width": 130 },
+    { "field": "createdAt", "label": "Created", "sortable": true, "width": 130 }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "_comment": "Field visibility config — register this in zorbit-pfs-datatable via PUT /api/v1/O/:orgId/datatable/pages/sample-tasks/fields",
+  "shortname": "sample-tasks",
+  "listFields": [
+    { "field": "hashId", "visible": true, "order": 1 },
+    { "field": "title", "visible": true, "order": 2 },
+    { "field": "status", "visible": true, "order": 3 },
+    { "field": "priority", "visible": true, "order": 4 },
+    { "field": "assigneeNameToken", "visible": true, "order": 5 },
+    { "field": "tags", "visible": true, "order": 6 },
+    { "field": "dueDate", "visible": true, "order": 7 },
+    { "field": "createdAt", "visible": true, "order": 8 }
+  ],
+  "gridFields": [
+    { "field": "hashId", "visible": true, "order": 1 },
+    { "field": "title", "visible": true, "order": 2 },
+    { "field": "status", "visible": true, "order": 3 },
+    { "field": "priority", "visible": true, "order": 4 }
+  ]
+}
