@@ -77,25 +77,25 @@ export class Task {
    * This stores a PII vault token (e.g. PII-92AF), NOT the raw name.
    * To display the actual name, call PII Vault's /detokenize endpoint.
    */
-  @Prop({ default: null })
+  @Prop({ type: String, default: null })
   assigneeNameToken!: string | null;
 
   /**
    * PII TOKEN — Assignee email address.
    * This stores a PII vault token (e.g. PII-81F3), NOT the raw email.
    */
-  @Prop({ default: null })
+  @Prop({ type: String, default: null })
   assigneeEmailToken!: string | null;
 
   /**
    * Assignee user hash ID (e.g. U-81F3).
    * This is NOT PII — it's a platform identifier used for lookups and filtering.
    */
-  @Prop({ default: null, index: true })
+  @Prop({ type: String, default: null, index: true })
   assigneeHashId!: string | null;
 
   /** Due date for the task. Null means no deadline. */
-  @Prop({ default: null })
+  @Prop({ type: Date, default: null })
   dueDate!: Date | null;
 
   /** Tags for categorization and filtering */
