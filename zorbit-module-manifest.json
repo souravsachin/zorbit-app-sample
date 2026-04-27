@@ -17,10 +17,10 @@
   "version": "0.1.0",
   "moduleId": "zorbit-app-sample",
   "placement": {
-    "scaffold": "business",
-    "sortOrder": 100,
-    "capabilityArea": "Sample",
-    "scaffoldSortOrder": 30
+    "scaffold": "developer_center",
+    "scaffoldSortOrder": 70,
+    "capabilityArea": "code_samples",
+    "sortOrder": 100
   },
   "type": "app",
   "moduleSlug": "app-sample",
