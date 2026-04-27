@@ -1,0 +1,13 @@
+{
+  "deck": [
+    {
+      "title": "sample overview",
+      "body": "Overview of zorbit-app-sample.",
+      "narration": {
+        "audioSrc": "./audio/client-pitch/0.mp3",
+        "text": "Overview of zorbit-app-sample.",
+        "duration": 10
+      }
+    }
+  ]
+}

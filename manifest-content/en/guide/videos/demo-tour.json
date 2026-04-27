@@ -1,0 +1,11 @@
+{
+  "entries": [
+    {
+      "title": "sample demo",
+      "src": "/static/videos/sample/demo.mp4",
+      "playerType": "tour",
+      "captions": "/static/videos/sample/demo.vtt",
+      "duration": 60
+    }
+  ]
+}
